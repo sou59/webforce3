@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>roshambo</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const roshambo = ['pierre', 'feuille', 'ciseaux'];
+      const urlVars = new URLSearchParams(location.search);
+      console.log(roshambo.includes(urlVars.get('choice')));
+      console.log(roshambo[Math.floor(Math.random() * Math.floor(3))]);
+    </script>
+  </body>
+</html>

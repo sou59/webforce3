@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>check number</title>
+    <script type="text/javascript">
+    // tant que le chiffre rentré n'est pas fini (donc tant qu'il est infini) ou n'est pas positif
+      // ==> alors on rappelle la fenêtre de saisie de données
+      // en "transtypant" la variable en flottant
+
+    //enfin on affiche une alerte du chiffre
+
+    let n = parseFloat(prompt("Ecrire un nombre positif :"));
+
+    while (!isFinite(n) || n < 0) {
+      n = Number(prompt("Ecrire un nombre positif :"));
+    }
+
+    alert("c'est good");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

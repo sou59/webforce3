@@ -1,0 +1,5 @@
+input[type="checkbox"]:checked + label
+{
+	 /* Lorsqu'une case à cocher est cochée, on barre le label */
+	text-decoration: line-through;
+}

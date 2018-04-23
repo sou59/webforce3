@@ -1,0 +1,15 @@
+body{
+    margin: 0 auto;
+    width: 90%;
+}
+em{
+    color: red;
+    font-weight: bold;
+}
+.photo-list{
+}
+.photo-list li{
+}
+/* gestion survol li */
+
+/* class selected li */

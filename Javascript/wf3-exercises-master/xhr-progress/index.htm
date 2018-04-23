@@ -1,0 +1,27 @@
+Access-Control-Allow-Origin: *
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>xhr progress</title>
+  </head>
+  <body style="text-align: center;">
+    <progress style="width: 300px; height: 30px;" id="progress" value="" max="100"></progress><br>
+    <div id="output"></div>
+    <script type="text/javascript">
+      // une fois que le DOM a chargé
+      document.addEventListener('DOMContentLoaded', () => {
+        // instanciation de l'objet XHR
+        const req = new XMLHttpRequest();
+        req.open('GET', 'http://www.mozilla.org', false);
+        req.send(null);
+
+        if (req.status === 200) {
+            console.log("Réponse reçue: %s", req.responseText);
+        } else {
+            console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
+        }
+      });
+    </script>
+  </body>
+</html>
