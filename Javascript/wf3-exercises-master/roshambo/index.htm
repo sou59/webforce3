@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>roshambo</title>
   </head>
   <body>
+
+    <button onclick="choicePierre()">Pierre</button>
+    <button onclick="choiceFeuille()">Feuille</button>
+    <button onclick="choiceCiseau()">Ciseaux</button>
+
+    <span class="result"></span>
+
     <script type="text/javascript">
       const roshambo = ['pierre', 'feuille', 'ciseaux'];
       const urlVars = new URLSearchParams(location.search);
-      console.log(roshambo.includes(urlVars.get('choice')));
-      console.log(roshambo[Math.floor(Math.random() * Math.floor(3))]);
+      console.log(urlVars.get("choice"));
+
+      const computerChoice = roshambo[Math.floor(Math.random() * Math.floor(roshambo.length))];
+
+      function choicePierre() {
+        location.search = "choice=pierre";
+      }
+
+      function choiceFeuille() {
+        location.search = "choice=feuille";
+      }
+
+      function choiceCiseau() {
+        location.search = "choice=ciseaux";
+      }
     </script>
   </body>
 </html>
