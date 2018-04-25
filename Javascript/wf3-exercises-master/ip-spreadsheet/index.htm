@@ -3,7 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>ip spreadsheet</title>
+    <script type="application/javascript">
+      function getIP(json) {
+        document.write("My public IP address is: ", json.ip);
+        console.log(json);
+
+        // https://script.google.com/macros/s/AKfycbzv_GDEXY8o3ZLsKcAaWPDjX64Cg_lW5GZFWbtA2xQtFZh4anVP/exec
+      }
+    </script>
   </head>
   <body>
   </body>
 </html>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>

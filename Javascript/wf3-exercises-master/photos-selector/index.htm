@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Sélecteur de photos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,9 +13,18 @@
         <ul class="photo-list">
             <script type="text/javascript">
             // A loop to display your images in li
+            const photoList = document.querySelector('.photo-list');
+            for (let i = 1; i < 11; i++) {
+                let newPhoto = document.createElement("img");
+                newPhoto.src = "images/" + i + ".jpg";
+                photoList.appendChild(document.createElement("li"));
+                // on utilise i+1 sinon car photoList.childNodes[0] = la balise script
+                photoList.childNodes[i+1].appendChild(newPhoto);
+            }
             </script>
         </ul>
-        <p id="total">Vous avez sélectionné <em>0</em> photo(s)</p>
+        <p id="total">Vous avez sélectionné <em class="test">0</em> photo(s)</p>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
