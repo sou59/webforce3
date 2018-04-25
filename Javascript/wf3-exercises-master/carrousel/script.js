@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
    */
 
   // A MATTER https://github.com/Chalarangelo/30-seconds-of-code
+
+  // https://www.journaldunet.fr/web-tech/developpement/ >>> surtout les trucs git
   // const imageCarrousel = document.querySelector('.carrousel img');
   const btnPrevious = document.querySelector('.previous');
   const btnNext = document.querySelector('.next');
