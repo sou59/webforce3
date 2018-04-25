@@ -10,9 +10,16 @@
     <script type="text/javascript">
       // une fois que le DOM a chargé
       document.addEventListener('DOMContentLoaded', () => {
-        // instanciation de l'objet XHR
+
         const req = new XMLHttpRequest();
-        req.open('GET', 'lib.json', false);
+        const url = 'citylots.json';
+        
+        req.addEventListener("progress", updateProgress, false);
+        req.addEventListener("load", transferComplete, false);
+        req.addEventListener("error", transferFailed, false);
+        req.addEventListener("abort", transferCanceled, false);
+        
+        req.open('GET', url, true);
         req.send(null);
 
         if (req.status === 200) {
@@ -21,10 +28,32 @@
             console.log("Status de la réponse: %d (%s)", req.status, req.statusText);
         }
 
-        req.addEventListener("progress", function(e) { console.log("test") }, false);
-        req.addEventListener("load", function(e) { console.log("test") }, false);
-        req.addEventListener("loadend", function(e) { console.log("test") }, false);
-        req.addEventListener("error", function(e) { console.log("test") }, false);
+        function updateProgress(oEvent) {
+          /*
+            The ProgressEvent.lengthComputable read-only property is a Boolean flag
+            indicating if the resource concerned by the ProgressEvent has a length that can be calculated.
+          */
+          if (oEvent.lengthComputable) { 
+            const percentComplete = (oEvent.loaded / oEvent.total)*100;
+            console.log("Téléchargement: %d%%", percentComplete);
+            document.getElementsByTagName("progress")[0].setAttribute("value", percentComplete);
+          } else {
+            // Impossible de calculer la progression puisque la taille total est inconnue
+          }
+        }
+        
+        function transferComplete(evt) {
+          console.log("Le transfert est terminé.");
+        }
+        
+        function transferFailed(evt) {
+          console.log("Une erreur est survenue pendant le transfert du fichier.");
+        }
+        
+        function transferCanceled(evt) {
+          console.log("Le transfert a été annulé par l'utilisateur.");
+        }
+
       });
     </script>
   </body>
