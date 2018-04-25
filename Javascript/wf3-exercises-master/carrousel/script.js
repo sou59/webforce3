@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', _ => {
+document.addEventListener('DOMContentLoaded', () => {
   // your logic
 
   // la variable "conteneur" du nom de fichier des photos et un titre arbitraire
@@ -16,19 +16,21 @@ document.addEventListener('DOMContentLoaded', _ => {
    - click sur un autre bouton/lien de l'interface
    - la même photo ne doit pas s'afficher 2 fois d'affilée!
    */
-  const imageCarrousel = document.querySelector('.carrousel img');
+
+  // A MATTER https://github.com/Chalarangelo/30-seconds-of-code
+  // const imageCarrousel = document.querySelector('.carrousel img');
   const btnPrevious = document.querySelector('.previous');
   const btnNext = document.querySelector('.next');
 
-  btnPrevious.addEventListener("click", () => {
-    console.log("Button previous clicked");
-  })
+  btnPrevious.addEventListener('click', () => {
+    console.log('Button previous clicked');
+  });
 
-  btnNext.addEventListener("click", () => {
-    console.log("Button next clicked");
-  })
+  btnNext.addEventListener('click', () => {
+    console.log('Button next clicked');
+  });
 
-  document.addEventListener("keyup", event => {
+  document.addEventListener('keyup', (event) => {
     console.log(event.key);
-  })
+  });
 });
