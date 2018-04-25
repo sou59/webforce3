@@ -1,4 +1,3 @@
-// after DOM tree has loaded
 document.addEventListener('DOMContentLoaded', _ => {
   // your logic
 
@@ -17,4 +16,19 @@ document.addEventListener('DOMContentLoaded', _ => {
    - click sur un autre bouton/lien de l'interface
    - la même photo ne doit pas s'afficher 2 fois d'affilée!
    */
+  const imageCarrousel = document.querySelector('.carrousel img');
+  const btnPrevious = document.querySelector('.previous');
+  const btnNext = document.querySelector('.next');
+
+  btnPrevious.addEventListener("click", () => {
+    console.log("Button previous clicked");
+  })
+
+  btnNext.addEventListener("click", () => {
+    console.log("Button next clicked");
+  })
+
+  document.addEventListener("keyup", event => {
+    console.log(event.key);
+  })
 });

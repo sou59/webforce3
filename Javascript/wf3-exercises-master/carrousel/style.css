@@ -1,0 +1,8 @@
+body {
+    unset: all;
+    background: #ddd;
+}
+
+button {
+    display: block;
+}
