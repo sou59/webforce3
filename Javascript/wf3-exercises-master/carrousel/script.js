@@ -1,38 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // your logic
+  (function initCaroussel() {
+    const carrousel = document.querySelector('.carrousel');
+    const btnPrevious = document.querySelector('.previous');
+    const btnNext = document.querySelector('.next');
 
-  // la variable "conteneur" du nom de fichier des photos et un titre arbitraire
+    // on duplique le dernier LI pour permettre de slider à gauche dès le début
+    const dupeLastListElement = carrousel.querySelectorAll('li')[carrousel.querySelectorAll('li').length - 1].cloneNode(true);
+    carrousel.insertAdjacentElement('afterbegin', dupeLastListElement);
 
-  // un index qui va "traverser" les positions de ce conteneur
+    function moveCarousselLeft() {
+      carrousel.removeChild(carrousel.querySelectorAll('li')[carrousel.querySelectorAll('li').length - 1]);
+      carrousel.insertAdjacentElement('afterbegin', carrousel.querySelectorAll('li')[carrousel.querySelectorAll('li').length - 1].cloneNode(true));
+    }
 
-  /*
-  Vos fonctions écouteurs comme par exemple:
-  - click suivant / appui flêche suivant
-  - click précédent / appui flêche retour
-  - appui sur barre espace (play/pause)
-  */
+    function moveCarousselRight() {
+      carrousel.insertAdjacentElement('beforeend', carrousel.querySelectorAll('li')[1].cloneNode(true));
+      carrousel.removeChild(carrousel.querySelectorAll('li')[0]);
+    }
 
-  /* gestion d'un DÉFILEMENT de photo ALÉATOIRE
-   - click sur un autre bouton/lien de l'interface
-   - la même photo ne doit pas s'afficher 2 fois d'affilée!
-   */
-
-  // A MATTER https://github.com/Chalarangelo/30-seconds-of-code
-
-  // https://www.journaldunet.fr/web-tech/developpement/ >>> surtout les trucs git
-  // const imageCarrousel = document.querySelector('.carrousel img');
-  const btnPrevious = document.querySelector('.previous');
-  const btnNext = document.querySelector('.next');
-
-  btnPrevious.addEventListener('click', () => {
-    console.log('Button previous clicked');
-  });
-
-  btnNext.addEventListener('click', () => {
-    console.log('Button next clicked');
-  });
-
-  document.addEventListener('keyup', (event) => {
-    console.log(event.key);
-  });
+    btnPrevious.addEventListener('click', moveCarousselLeft);
+    btnNext.addEventListener('click', moveCarousselRight);
+    document.addEventListener('keyup', (event) => {
+      switch (event.key) {
+        case 'ArrowRight':
+          moveCarousselRight();
+          break;
+        case 'ArrowLeft':
+          moveCarousselLeft();
+          break;
+        default:
+          break;
+      }
+    });
+  }());
 });

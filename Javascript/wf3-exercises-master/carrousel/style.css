@@ -1,8 +1,36 @@
 body {
-    unset: all;
     background: #ddd;
 }
 
 button {
-    display: block;
+}
+
+.wrapper {
+    background: green;
+    position: relative;
+    margin: 50px auto 0;
+    width: 800px;
+    height: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carrousel {
+    position: absolute;
+    transition: .5s all;
+    left: -800px;
+    right: 0;
+}
+
+.carrousel li {
+    background: yellow;
+    display: inline-block;
+    width: 800px;
+    height: 500px;
+}
+
+.carrousel img {
+    background: red;
+    width: 800px;
+    height: 500px;
 }
