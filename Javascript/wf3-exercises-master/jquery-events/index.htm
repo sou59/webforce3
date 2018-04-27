@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery events</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+  <h1>exercices jQuery : événements</h1>
+  <h2>concepts fondamentaux</h2>
+</header>
+<section id="exercice_3_1">
+  <header class="clearfix">
+    <h1>1</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>clic</mark> sur la boîte, <mark>cacher la boîte</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div id="b">boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_2">
+  <header class="clearfix">
+    <h1>2</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>clic</mark> sur la boîte 0, <mark>cacher ou afficher la boîte 1</mark> (utiliser le ciblage par classe).</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div class="clic">boîte 0</div>
+    <div class="cible">boîte 1</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_3">
+  <header class="clearfix">
+    <h1>3</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>double-clic</mark> sur la boîte 0, <mark>alterner l'attribution de la class highlight</mark> à la boîte 1 (attribuer / supprimer successivement).</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div id="b0">boîte 0</div>
+    <div>boîte 1</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_4">
+  <header class="clearfix">
+    <h1>4</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>double-clic</mark> sur la boîte 0, <mark>alterner l'affichage</mark> de la boîte 1 (cacher / afficher successivement).</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div id="b1">boîte 0</div>
+    <div>boîte 1</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_5">
+  <header class="clearfix">
+    <h1>5</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>survol</mark>, <mark>cacher la boîte avec un effet de fade out</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div id="b2">boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_6">
+  <header class="clearfix">
+    <h1>6</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>survol</mark>, <mark>diminuer l'opacité de la boîte de 50%</mark>. Rétablir l'opacité lors de la sortie de l'élément.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div id="b3">boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_7">
+  <header class="clearfix">
+    <h1>7</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>obtenir le focus</mark> sur le champ de formulaire, <mark>cacher la boîte</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <form action="">
+      <input id="inp0" type="text" placeholder="champ de formulaire">
+    </form>
+    <div>boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_8">
+  <header class="clearfix">
+    <h1>8</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>perdre le focus</mark> sur le champ de formulaire, <mark>cacher la boîte</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <form action="">
+      <input id="inp1" type="text" placeholder="champ de formulaire">
+    </form>
+    <div>boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_9">
+  <header class="clearfix">
+    <h1>9</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>valeur de contenu modifiée</mark> sur le champ de formulaire, <mark>cacher la boîte</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <form action="">
+      <input id="inp2" type="text" placeholder="champ de formulaire">
+    </form>
+    <div>boîte</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<section id="exercice_3_10">
+  <header class="clearfix">
+    <h1>10</h1>
+    <section>
+      <p>Au déclenchement de l'événement <mark>touche <kbd>h</kbd> enfoncée</mark>, <mark>vider toutes les boîtes de leur contenu</mark>.</p>
+    </section>
+  </header>
+  <article class="clearfix">
+  <!-- debut de la cible -->
+
+    <div>boîte 0</div>
+    <div>boîte 1</div>
+    <div>boîte 2</div>
+    <div>boîte 3</div>
+    <div>boîte 4</div>
+    <div>boîte 5</div>
+
+  <!-- fin de la cible -->
+  </article>
+</section>
+<script type="text/javascript" src="script.js">
+</script>
+  </body>
+</html>
