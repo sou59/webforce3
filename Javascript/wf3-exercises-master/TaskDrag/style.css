@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+body, body * {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#actions label {
+    display: block;
+}
+
+#actions label::after {
+    content: ' :';
+}
+
+#tasks {
+    position: relative;
+    background-color: dimgray;
+    box-shadow: 0 0 5px black inset;
+    height: 600px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#tasks > article {
+    background: white;
+    position: absolute;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: move;
+}
+
+#done {
+    background-color: lightgray;
+    width: 250px;
+    text-align: center;
+}
+
+#done ul {
+    list-style: none;
+    padding: 0;
+}
+
+#done ul > li {
+    padding: 4px;
+    border-top: 1px solid darkgray;
+}
+
+#done ul > li:last-child {
+    border-bottom: 1px solid darkgray;
+}
+
+#tasks > article > * {
+    padding: 0 6px;
+}
+
+#tasks > article.movable {
+    background-color: rgb(149, 192, 228);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#done.hover {
+    background: #7FDBFF;
+}
+
+#tasks .hover {
+    background: #7FDBFF;
+}
