@@ -1,0 +1,79 @@
+<article class="cours" id="css">
+	<h2>Un concept parmi d'autres, présent dès l'origine du web</h2>
+	<p>
+		Le concept de <a href="/wiki/Feuille_de_style" title="Feuille de style">feuille de style</a> est présent dès l'origine du <a href="/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a>&nbsp;: le premier <a href="/wiki/Navigateur_web" title="Navigateur web">navigateur web</a> («&nbsp;WorldWideWeb&nbsp;», renommé par la suite «&nbsp;Nexus&nbsp;») permet de mettre en forme les documents à l'aide de ce qui serait aujourd'hui considéré comme une «&nbsp;feuille de style utilisateur&nbsp;»<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>. De même, les navigateurs <a href="/wiki/Viola" class="mw-disambig" title="Viola">Viola</a> en <a href="/wiki/1992" title="1992">1992</a> et <a href="/wiki/Harmony" class="mw-disambig" title="Harmony">Harmony</a> en <a href="/wiki/1993" title="1993">1993</a> recourent à un mécanisme similaire permettant de déterminer le rendu des polices de caractères, des couleurs ou de l'alignement du texte.
+	</p>
+	<p>
+		Il ne s'agit cependant pas de styles déterminés par l'auteur du document. <a href="/wiki/HTML" class="mw-redirect" title="HTML">HTML</a> ne comportant pas non plus d'éléments de présentation dans ses premières années, une pression croissante s'exerce alors pour que les navigateurs permettent aux auteurs de déterminer eux-mêmes la présentation des <a href="/wiki/Pages_web" class="mw-redirect" title="Pages web">pages web</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span class="cite_crochet">[</span>3<span class="cite_crochet">]</span></a></sup>, dans une démarche issue de la publication imprimée électronique. C'est dans ce contexte, en <a href="/wiki/1994" title="1994">1994</a>-<a href="/wiki/1995" title="1995">1995</a>, que le tout nouveau <a href="/wiki/Netscape_Navigator" title="Netscape Navigator">Netscape Navigator</a> introduit les premiers éléments HTML de présentation à l'initiative de <a href="/wiki/Marc_Andreessen" title="Marc Andreessen">Marc Andreessen</a>, tandis qu'apparaissent concurremment les premières propositions de styles externes<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span class="cite_crochet">[</span>n. 1<span class="cite_crochet">]</span></a></sup>&nbsp;: le «&nbsp;stylesheet proposal&nbsp;» de Pei Wei (créateur de Viola)<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span class="cite_crochet">[</span>4<span class="cite_crochet">]</span></a></sup>, les «&nbsp;Stylesheets for HTML&nbsp;» de Robert Raisch (O'Reilly)<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span class="cite_crochet">[</span>5<span class="cite_crochet">]</span></a></sup>, et enfin les «&nbsp; Cascading HTML Style Sheets&nbsp;» (CHSS) d'<a href="/wiki/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Håkon Wium Lie</a><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span class="cite_crochet">[</span>6<span class="cite_crochet">]</span></a></sup>. L'apparition de CSS répond à une volonté de «&nbsp;proposer une alternative à l'évolution du HTML d'un langage de structuration vers un langage de présentation&nbsp;»<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span class="cite_crochet">[</span>7<span class="cite_crochet">]</span></a></sup>.
+	</p>
+	<p>
+		Une troisième voie de développement est également ouverte à la même époque&nbsp;: le langage de transformation DSSSL des documents <a href="/wiki/SGML" class="mw-redirect" title="SGML">SGML</a>, élaboré par <a href="/wiki/James_Clark_(informatique)" title="James Clark (informatique)">James Clark</a>, suggère la possibilité d'un langage de styles qui ne soit pas seulement descriptif, et se rapproche d'un véritable <a href="/wiki/Langage_de_programmation" title="Langage de programmation">langage de programmation</a><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span class="cite_crochet">[</span>n. 2<span class="cite_crochet">]</span></a></sup>. Cette voie est suivie par Netscape, qui propose en <a href="/wiki/1996" title="1996">1996</a> au W3C les «&nbsp;JavaScript-Based Style Sheets&nbsp;» (JSSS)<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span class="cite_crochet">[</span>8<span class="cite_crochet">]</span></a></sup>, implémentées par Netscape Navigator 4 en <a href="/wiki/1997" title="1997">1997</a>.
+	</p>
+	<p>
+		Les origines des CSS sont donc liées à trois possibilités majeures&nbsp;:
+	</p>
+	<ul>
+		<li>HTML est-il un langage de structuration ou un langage mixte de mise en forme et de structuration&nbsp;?</li>
+		<li>Les choix de présentation de l'auteur doivent-ils avoir la primauté sur ceux de l'utilisateur&nbsp;?</li>
+		<li>La réponse aux besoins est-elle un langage de description de la mise en forme, ou un langage de transformation&nbsp;?</li>
+	</ul>
+	<h2>
+		Les premiers développements
+	</h2>
+	<p>
+		La première proposition de <i><span class="lang-en" lang="en">Cascading HTML Style Sheets</span></i> formulée par <a href="/wiki/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Håkon Wium Lie</a> retient l'attention de <a href="/w/index.php?title=Dave_Raggett&amp;action=edit&amp;redlink=1" class="new" title="Dave Raggett (page inexistante)">Dave Raggett</a>, qui est alors le principal éditeur du projet de spécification HTML 3.0. Partisan d'un HTML purement structurel, il encourage la publication d'un document de travail CHSS, afin que celui-ci puisse être présenté et discuté à la seconde conférence internationale sur le WWW (<i><span class="lang-en" lang="en">Mosaic and the Web</span></i>, Chicago, 1994). Il modifie également avec Håkon Lie le navigateur <a href="/w/index.php?title=Arena_(navigateur_web)&amp;action=edit&amp;redlink=1" class="new" title="Arena (navigateur web) (page inexistante)">Arena</a><sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span class="cite_crochet">[</span>n. 3<span class="cite_crochet">]</span></a></sup>, afin de permettre de tester ce langage, et en fait la démonstration lors de la troisième conférence WWW en 1995.
+	</p>
+	<p>
+		Parallèlement, <a href="/wiki/Bert_Bos" title="Bert Bos">Bert Bos</a>, qui travaillait alors sur le navigateur <a href="/w/index.php?title=Argo_(navigateur)&amp;action=edit&amp;redlink=1" class="new" title="Argo (navigateur) (page inexistante)">Argo</a><sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span class="cite_crochet">[</span>9<span class="cite_crochet">]</span></a></sup>, et qui avait soumis au W3C son propre projet «&nbsp;<span class="lang-en" lang="en">Stream-based Style Sheet Proposal</span>&nbsp;» (SSP), décide de joindre ses efforts à ceux d'Håkon Lie. SSP ayant été développé avec l'idée d'être applicable non seulement à HTML, mais aussi à d'autres langages de balisage, Bert Bos et Håkon Lie reprennent cet objectif, et en font une des caractéristiques clés de ce qui devient alors CSS proprement dit.
+	</p>
+	<p>
+		Un autre aspect de CSS s'avère alors déterminant face aux alternatives existantes&nbsp;: CSS est le premier langage à inclure l'idée de «&nbsp;cascade&nbsp;» (feuille de style <i>en cascade</i>), c'est-à-dire la possibilité pour le style d'un document d'être hérité à partir de plusieurs «&nbsp;feuilles de style&nbsp;». Cela permet d'arbitrer entre plusieurs sources concurrentes de mise en forme d'un élément, et répond donc à la nécessité de composer entre les préférences stylistiques des auteurs et des utilisateurs.
+	</p>
+	<p>
+		Le <span class="lang-en" lang="en">World Wide Web Consortium</span> (W3C) devient opérationnel en 1995, et la liste de discussion www-style est alors créée<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span class="cite_crochet">[</span>10<span class="cite_crochet">]</span></a></sup>. La même année se tient à Paris un «&nbsp;W3C style sheet workshop&nbsp;» décisif pour l'avenir des CSS<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span class="cite_crochet">[</span>11<span class="cite_crochet">]</span></a></sup>. Y est notamment affirmée la volonté de conserver les feuilles de style sous une forme simple, ce qui exclut l'hypothèse JSSS de Netscape. Par ailleurs, <a href="/w/index.php?title=Thomas_Reardon&amp;action=edit&amp;redlink=1" class="new" title="Thomas Reardon (page inexistante)">Thomas Reardon</a> (Microsoft) y annonce le support à venir de CSS dans les futures versions d'<a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a>&nbsp;: dès lors, lorsque le W3C crée à la fin de l'année le «&nbsp;<span class="lang-en" lang="en">HTML Editorial Review Board</span>&nbsp;» (HTML ERB) pour ratifier les futures spécifications HTML, DOM et CSS, Netscape, représenté par <a href="/wiki/Lou_Montulli" title="Lou Montulli">Lou Montulli</a>, se rallie finalement au projet CSS mené par Bert Bos et Håkon Lie.
+	</p>
+	<h2>
+		Vers une maturation difficile
+	</h2>
+	<p>
+		Contrairement aux <a href="/wiki/Logiciels" class="mw-redirect" title="Logiciels">logiciels</a>, les spécifications CSS ne sont pas développées par versions successives, qui permettraient à un navigateur de se référer à une version en particulier. CSS est développé par «&nbsp;niveaux&nbsp;», ce qui contraint chaque nouveau niveau à intégrer le précédent, et chaque implémentation à être compatible avec la précédente&nbsp;: CSS1 est donc développé pour être un sous-ensemble de CSS2, qui est lui-même développé pour être un sous-ensemble de CSS3. Ceci explique en partie la lenteur de l'avancement normatif de CSS<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span class="cite_crochet">[</span>12<span class="cite_crochet">]</span></a></sup>.
+	</p>
+
+</article>
+
+<form class="questionnaire">
+	<div class="switch-form">
+		<span class="hide">&darr;</span>
+		<span class="display">&uarr;</span>
+	</div>
+	<section>
+		<p class="question">
+			Quel était le nom des feuilles de styles imaginées et implémentées en 1997 par le navigateur Netscape ?
+		</p>
+		<ul>
+			<li><label for="answer-SSSJ">SSSJ</label><input type="radio" name="javascript-style" id="answer-SSSJ" value="0"/></li>
+			<li><label for="answer-SSJS">SSJS</label><input type="radio" name="javascript-style" id="answer-SSJS" value="0"/></li>
+			<li><label for="answer-SJSS">SJSS</label><input type="radio" name="javascript-style" id="answer-SJSS" value="0"/></li>
+			<li><label for="answer-JSSS">JSSS</label><input type="radio" name="javascript-style" id="answer-JSSS" value="1"/></li>
+		</ul>
+	</section>
+	<section>
+		<p class="question">
+			Que signifie CSS ?
+		</p>
+		<label for="answer-css">Entrez votre réponse :</label><input class="exact-answer" id="answer-css" name="answer-css" data-answer="cascading style sheet" placeholder="Ma réponse"/>
+	</section>
+
+	<section>
+		<p class="question">
+			Quelle est la version actuelle de CSS ?
+		</p>
+		<ul>
+			<li><label for="answer-css-1">1</label><input type="radio" name="css-version-data" id="answer-css-1" value="0"/></li>
+			<li><label for="answer-css-2">2</label><input type="radio" name="css-version-data" id="answer-css-2" value="0"/></li>
+			<li><label for="answer-css-3">3</label><input type="radio" name="css-version-data" id="answer-css-3" value="1"/></li>
+			<li><label for="answer-css-4">4</label><input type="radio" name="css-version-data" id="answer-css-4" value="0"/></li>
+		</ul>
+	</section>
+
+</form>

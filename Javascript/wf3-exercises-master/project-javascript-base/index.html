@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Projet évaluation javascript</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="styles/style.css" rel="stylesheet"/>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<h1>JS 7</h1>
+			<h2>Inscription</h2>
+		</header>
+		<section id="presentation">
+			<p>
+				<em>JS 7</em> est un club très privé auquel seuls les initiés du javascript ont accès.
+				Pour pouvoir intégrer la <em>JS 7</em>, il vous faudra remplir le formulaire ci-dessous.
+			</p>
+		</section>
+		<section id="main-section">
+			<form>
+				<p class="line-form">
+					<label for="InputNom">Nom : </label><input type="text" name="nom" id="InputNom" />
+					<span class="tooltip">Veuillez entrer votre nom</span>
+				</p>
+				<p class="line-form">
+					<label for="InputPrenom">Prénom : </label><input type="text" name="prenom" id="InputPrenom" />
+					<span class="tooltip">Veuillez entrer votre prénom</span>
+				</p>
+
+				<p class="line-form">
+					<label for="InputPassword">Mot de passe : </label><input type="password" name="password" id="InputPassword" />
+					<span class="tooltip">Veuillez entrer votre mot de passe</span>
+				</p>
+
+				<p class="line-form">
+					<label for="InputConfirmPassword">Confirmation : </label><input type="password" name="confirmation-password" id="InputConfirmPassword" />
+					<span class="tooltip">Confirmez votre mot de passe</span>
+				</p>
+
+				<p class="line-form">
+					<label for="InputAimeJS">J'aime le JS : </label><input type="checkbox" name="aime-js" id="InputAimeJS" />
+				</p>
+				<p class="line-form">
+					<label for="InputPhraseSecrete">Slogan secret : </label><textarea name="phrase-secrete" id="InputPhraseSecrete" data-answer="php is coming"></textarea>
+					<span class="tooltip">Veuillez entrer le slogan secret des membres de la JS 7</span>
+				</p>
+				<p class="line-form">
+					<button type="submit" name="valider">Intégrer JS 7</button>
+				</p>
+			</form>
+		</section>
+	</body>
+	<script src="script.js"></script>
+</html>

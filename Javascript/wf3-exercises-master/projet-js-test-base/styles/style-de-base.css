@@ -1,0 +1,148 @@
+body {
+	font-family: arial;
+	background-color: #eee;
+	margin: 0;
+}
+
+header {
+	background: white;
+	padding: 30px;
+	border-bottom: 2px solid lightslategray;
+}
+
+header h1 {
+	margin: 0;
+}
+
+aside {
+	position: fixed;
+	right:0;
+	top: 0;
+	width: 60px;
+	height:100%;
+	background-color: lightslategray;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px #444;
+	z-index: 100;
+	transition: width .2s;
+}
+
+#hamburger {
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+#hamburger .burger-layer {
+	height: 3px;
+	background-color: white;
+	margin: 2px 20px;
+}
+
+#navigation {
+	display: none;
+}
+
+#navigation h3 {
+	text-align: center;
+	color: white;
+}
+
+aside.displayed {
+	width: 200px;
+}
+
+aside.displayed #hamburger {
+	display: none;
+}
+
+aside.displayed #navigation {
+	display: block;
+}
+
+#navigation ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+#navigation ul li a {
+	display: block;
+	text-align: center;
+	padding: 8px 0;
+	text-decoration: none;
+	color: #aaa;
+	font-weight: normal;
+	border-bottom: 1px solid #aaa;
+}
+
+#navigation ul li a:hover, #navigation ul li a.selected {
+	color: white;
+	border-color: white;
+}
+
+#navigation ul li:first-child a {
+	border-top : 1px solid #aaa;
+}
+
+aside ul li .tooltip {
+	display : none;
+}
+
+#main-section > * {
+	padding: 20px;
+	margin-right: 60px;
+}
+
+#main-section .cours {
+	text-align: justify;
+	font-size: 0.85em;
+}
+
+.questionnaire {
+	position: fixed;
+	bottom: 0;
+	height: 150px;
+	background: white;
+	color: #555;
+	font-size: 0.9em;
+	width: 100%;
+	transform: translateY(170px);
+	padding-top: 40px !important;
+	transition: transform 0.4s linear;
+}
+
+.questionnaire .switch-form .hide {
+	display: none;
+}
+
+.questionnaire.displayed .switch-form .display {
+	display: none;
+}
+
+.questionnaire.displayed .switch-form .hide {
+	display: block;
+}
+
+.questionnaire.displayed {
+	transform: translate(0);
+	padding-top: 20px !important;
+	box-shadow: 0 0 5px #333;
+}
+
+.questionnaire > section {
+	float: left;
+	width: 30%;
+	margin-right: 3%;
+}
+
+.questionnaire > section:last-child {
+	margin-right: 0;
+}
+
+.switch-form {
+	cursor: pointer;
+	position: absolute;
+	top : 10px;
+	right: 120px;
+	font-weight: bold;
+}
